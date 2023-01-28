@@ -5,7 +5,7 @@ class MonthData {
         System.out.println("количество пройденных шагов по дням");
         for (int i = 0; i < 30; i++) {
             int steps = days[i];
-            System.out.printf("%d день: %d\n", i + 1, steps);
+            System.out.printf("%d день: %d.\n", i, steps);
         }
     }
 
