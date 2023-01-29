@@ -28,8 +28,7 @@ class MonthData {
         return maxSteps;
     }
 
-
-    int bestSeries(int goalByStepsPerDay) { // 10`000
+    int bestSeries(int goalByStepsPerDay) {
         int bestSession = 0;
         int countBest = 0;
         int day = 0;
@@ -38,10 +37,10 @@ class MonthData {
             if (steps >= goalByStepsPerDay && bestSession < 1) {
                 bestSession = 1;
                 day = i;
-            } else if (steps >= goalByStepsPerDay && bestSession == 1 && day == i - 1) {
+            } else if (steps >= goalByStepsPerDay && day == i - 1) {
                 bestSession += 1;
                 day = i;
-            } else if (bestSession > 1 && day != i - 1) {
+            } else if (bestSession >= 1 && day != i - 1) {
                 bestSession = 0;
             }
             if (countBest < bestSession) {

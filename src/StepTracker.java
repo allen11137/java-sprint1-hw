@@ -40,7 +40,12 @@ class StepTracker {
     }
 
     void changeStepGoal() {
-        goalByStepsPerDay = scanner.nextInt();
+        int stepGoals = scanner.nextInt();
+        if (stepGoals < 1) {
+            System.out.println("Не верный ввод.");
+            return;
+        }
+        goalByStepsPerDay = stepGoals;
     }
 
     void printStatistic() {
