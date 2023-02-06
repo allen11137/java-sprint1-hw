@@ -36,7 +36,7 @@ class StepTracker {
             System.out.println("Не верный ввод.");
             return;
         }
-        monthToDatum.days[day] = steps;
+        monthToDatum.days[day - 1] = steps;
     }
 
     void changeStepGoal() {
